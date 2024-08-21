@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 14:22:53 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/21 21:29:37 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/21 23:44:14 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,20 @@ int	main()
 	PhoneBook phoneBook;
 	int index = 0;
 	
-	while(true)
-	{
+	while(true){
 		std::cout << "PHONEBOOK commands: ADD, SEARCH, EXIT: ";
 		// std::getline(std::cin, input); //TODO: what is cin exactly?
-		if (!std::getline(std::cin, input)) // safeguard
-		{
+		if (!std::getline(std::cin, input)) {
 			std::cout << "Exiting the program!" << std::endl;
 		}
-		if(input == "ADD")
-		{
+		if(input == "ADD") {
 			phoneBook.addContact(index);
 			index = (index + 1 ) % 8;
 		}
-		else if(input == "SEARCH")
-		{
-			std::cout << "SEARCH command is correct" << std::endl;
-			phoneBook.displayFirstContactsName();
-
+		else if(input == "SEARCH") {
+			phoneBook.displayContacts();
 		}
-
-		else if(input == "EXIT")
-		{
+		else if(input == "EXIT") {
 			std::cout << "Exiting the program!" << std::endl;
 			break;
 		}

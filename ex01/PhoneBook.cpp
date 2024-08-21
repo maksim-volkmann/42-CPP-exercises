@@ -6,12 +6,13 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 21:26:34 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/21 21:27:23 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/21 23:49:01 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "PhoneBook.hpp"
+#include <iomanip>
 
 void PhoneBook::addContact(int index) {
 	std::string firstName, lastName, nickname, phoneNumber, darkestSecret;
@@ -61,6 +62,28 @@ void PhoneBook::addContact(int index) {
 	std::cout << "Contact successfully added to the phonebook!" << std::endl;
 }
 
-void PhoneBook::displayFirstContactsName() const {
-	std::cout << "First contact name: " << contactList[0].getFirstName() << std::endl;
+void PhoneBook::displayContacts() const {
+	std::cout << "Index | First Name | Last Name  | Nickname  " << std::endl;
+	std::cout << "--------------------------------------------" << std::endl;
+
+	for (int i = 0; i < 8; i++) {
+		if (!contactList[i].getFirstName().empty()) {  // Check if a contact exists
+			std::cout << std::setw(5) << i + 1 << " | "
+						<< std::setw(10) << contactList[i].getFirstName() << " | "
+						<< std::setw(10) << contactList[i].getLastName() << " | "
+						<< std::setw(10) << contactList[i].getNickname() << std::endl;
+		}
+	}
+	int index;
+	std::cout << "Enter the index of the contact to view details: ";
+
+	while (!(std::cin >> index) || index < 1 || index > 8 || contactList[index - 1].getFirstName().empty()) {
+		if (std::cin.fail()) {  // Handle non-integer input
+			std::cin.clear();   // Clear the error flag on cin
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Discard bad input
+		}
+		std::cout << "Invalid index. Please try again: ";
+	}
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Discard remaining input
+	contactList[index - 1].displayFullContactDetails();  // Display the full contact details
 }

@@ -6,10 +6,9 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 21:25:04 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/21 21:27:58 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/21 23:47:10 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef CONTACT_HPP
 #define CONTACT_HPP
@@ -27,7 +26,9 @@ private:
 public:
 	void createNewContact(std::string fN, std::string ln, std::string nn, std::string pN, std::string dS);
 	std::string getFirstName() const;
-
+	std::string getLastName() const;
+	std::string getNickname() const;
+	void displayFullContactDetails() const;
 };
 
 #endif

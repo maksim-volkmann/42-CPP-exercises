@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 21:24:56 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/21 21:27:30 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/21 23:41:53 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ private:
 
 public:
 	void addContact(int index);
-	void displayFirstContactsName() const;
+	void displayContacts() const;
 };
 
 #endif
