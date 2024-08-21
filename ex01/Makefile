@@ -6,12 +6,12 @@
 #    By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/17 13:55:52 by mvolkman          #+#    #+#              #
-#    Updated: 2024/08/19 14:25:22 by mvolkman         ###   ########.fr        #
+#    Updated: 2024/08/21 21:28:40 by mvolkman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = main
-SRC = main.cpp
+SRC = main.cpp Contact.cpp PhoneBook.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
