@@ -6,12 +6,12 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 14:22:53 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/21 23:44:14 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/22 09:59:38 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
+// #include <string>
 #include "PhoneBook.hpp"
 
 int	main()
@@ -19,7 +19,7 @@ int	main()
 	std::string input;
 	PhoneBook phoneBook;
 	int index = 0;
-	
+
 	while(true){
 		std::cout << "PHONEBOOK commands: ADD, SEARCH, EXIT: ";
 		// std::getline(std::cin, input); //TODO: what is cin exactly?
