@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/15 14:49:12 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/24 14:30:19 by mvolkman         ###   ########.fr       */
+/*   Created: 2024/08/24 14:45:53 by mvolkman          #+#    #+#             */
+/*   Updated: 2024/08/24 18:47:41 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-int	main(int ac, char **av)
-{
-	if(ac == 1) {
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	}
-	else {
-		std::string output;
+#include "Contact.hpp"
 
-		for(int i = 1; i < ac; i++)
-			output += av[i];
+class PhoneBook {
+private:
+	Contact contactList[8];
+	std::string formatText(const std::string& text) const;
 
-		for(int i = 0; i < output.length(); i++)
-			output[i] = std::toupper(output[i]);
+public:
+	void addContact(int index);
+	void displayContacts() const;
+};
 
-		std::cout << output << std::endl;
-	}
-
-	return (0);
-}
+#endif
+    //  bomzas
+    //   urodas |
+// |     INDEX|FIRST NAME| LAST NAME|  NICKNAME|
