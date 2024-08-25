@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:45:20 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/24 18:53:00 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/25 22:50:01 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,18 @@ void PhoneBook::displayContacts() const {
 	}
 	std::cout << "-------------------------------------------" << std::endl;
 	std::cout << std::endl;
-	// std::string name1 = contactList[0].getFirstName();
 
-	// std::cout << contactList.size() << std::endl;
+	int index;
+	std::cout << "Enter the index of the contact to display details (1-8): ";
+	std::cin >> index;
+
+	// Simple loop to check if the index is valid
+	if (index >= 1 && index <= 8 && !contactList[index - 1].getFirstName().empty()) {
+		contactList[index - 1].displayFullContactDetails();
+	} else {
+		std::cout << "Invalid index. Please enter a valid number between 1 and 8." << std::endl;
+	}
+
+	// std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	while (std::cin.get() != '\n');
 }
