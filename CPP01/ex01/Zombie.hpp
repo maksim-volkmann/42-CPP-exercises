@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/22 10:00:24 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/26 16:27:05 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/26 17:31:06 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ private:
 	std::string name;
 
 public:
-	Zombie(std::string zombieName);
+	Zombie();
+	void setZombieName(std::string zombieName);
 	void announce(void);
 	~Zombie();
 };
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
+Zombie* zombieHorde( int N, std::string name );
 
 #endif
