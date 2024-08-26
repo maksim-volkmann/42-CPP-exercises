@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/24 14:45:20 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/25 22:50:01 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/26 14:06:43 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void PhoneBook::addContact(int index) {
 	std::cout << "Contact successfully saved in the phonebook!" << std::endl;
 }
 
-std::string PhoneBook::formatText(const std::string& text) const { // Mark as const
+std::string PhoneBook::formatText(const std::string& text) const {
 	if(text.length() > 10)
 		return text.substr(0, 9) + '.';
 	else
@@ -93,13 +93,14 @@ void PhoneBook::displayContacts() const {
 	std::cout << "Enter the index of the contact to display details (1-8): ";
 	std::cin >> index;
 
-	// Simple loop to check if the index is valid
+	if (std::cin.fail()) {
+		std::cin.clear();
+	}
 	if (index >= 1 && index <= 8 && !contactList[index - 1].getFirstName().empty()) {
 		contactList[index - 1].displayFullContactDetails();
 	} else {
-		std::cout << "Invalid index. Please enter a valid number between 1 and 8." << std::endl;
+		std::cout << "Invalid index." << std::endl;
 	}
 
-	// std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	while (std::cin.get() != '\n');
 }
