@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 18:38:48 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/26 18:42:44 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/27 14:11:11 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@ private:
 	std::string type;
 
 public:
-	void getType() const;
-	void setType() const;
+	Weapon(const std::string& type);
+	const std::string& getType() const;
+	void setType(const std::string& type);
 
 };
 #endif

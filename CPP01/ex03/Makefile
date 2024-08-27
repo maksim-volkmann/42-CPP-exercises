@@ -6,15 +6,15 @@
 #    By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/15 14:48:08 by mvolkman          #+#    #+#              #
-#    Updated: 2024/08/26 17:41:48 by mvolkman         ###   ########.fr        #
+#    Updated: 2024/08/27 14:28:33 by mvolkman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = main
-SRC = main.cpp
+SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++17
 
 all: $(NAME)
 
