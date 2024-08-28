@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/27 18:41:31 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/27 19:41:48 by mvolkman         ###   ########.fr       */
+/*   Created: 2024/08/26 20:41:31 by mvolkman          #+#    #+#             */
+/*   Updated: 2024/08/28 10:47:10 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ std::string replaceS1S2(const std::string& line, const std::string& s1, const st
 	return newLine;
 }
 
-// Function to process the entire file, replacing s1 with s2
 void execution(const std::string& filename, const std::string& s1, const std::string& s2) {
 	std::ifstream inputFile(filename);
 	if (!inputFile.is_open()) {

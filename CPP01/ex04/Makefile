@@ -6,11 +6,11 @@
 #    By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/15 14:48:08 by mvolkman          #+#    #+#              #
-#    Updated: 2024/08/27 15:15:58 by mvolkman         ###   ########.fr        #
+#    Updated: 2024/08/28 10:47:24 by mvolkman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = main
+NAME = replace
 SRC = main.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
