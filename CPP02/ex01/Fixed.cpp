@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 09:40:39 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/31 15:04:47 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:48:37 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,3 +47,4 @@ int Fixed::getRawBits(void) const {
 void Fixed::setRawBits(int const raw) {
 	this->fixedNumber = raw;
 }
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);

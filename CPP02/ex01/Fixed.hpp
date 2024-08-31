@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 09:40:00 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/31 15:04:46 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/31 15:51:34 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ public:
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
 };
+//figure it out
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif
