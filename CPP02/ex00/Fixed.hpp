@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 09:40:00 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/08/30 14:53:09 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/08/31 14:32:53 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,11 @@ private:
 public:
 	Fixed();
 	Fixed(const Fixed& other);
-	// Fixed& operator=(const Fixed& other);
-	// ~Fixed();
-	// int getRawBits(void) const;
-	// void setRawBits(int const raw);
+	Fixed& operator=(const Fixed& other);
+	~Fixed();
 
-
+	int getRawBits(void) const;
+	void setRawBits(int const raw);
 };
 
-
 #endif
-
