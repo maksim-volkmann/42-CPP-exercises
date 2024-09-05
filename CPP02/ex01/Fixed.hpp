@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 09:40:00 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/03 13:19:36 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/05 11:06:23 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ public:
 	int toInt(void) const;
 };
 
-// std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 09:40:39 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/03 13:19:40 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/05 11:06:19 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int Fixed::toInt(void) const {
 	return this->_fixedNumber >> fractionalBits;
 }
 
-// std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
-// 	os << fixed.toFloat();
-// 	return os;
-// }
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
+	os << fixed.toFloat();
+	return os;
+}
