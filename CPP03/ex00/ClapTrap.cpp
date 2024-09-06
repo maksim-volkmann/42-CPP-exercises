@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 11:09:24 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/05 12:43:21 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/06 11:08:27 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,17 +62,18 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	if(this->_hitPoints == 0) {
 		std::cout << "ClapTrap " << this->_name << " is dead! It cannot repair itself anymore!" << std::endl;
 	} else if (this->_energyPoints == 0) {
-		std::cout << "ClapTrap " << this->_name << " has no energy points! It cannot repair itself anymore!" << std::endl;
-	} else if (this->_energyPoints > 0) {
-		std::cout << "ClapTrap " << this->_name << " repaired itself for " << amount << std::endl;
+		std::cout << "ClapTrap " << this->_name << " has no energy points to repair itself!" << std::endl;
+	} else {
+		unsigned int repairAmount = amount;
+
+		if (this->_hitPoints + amount > 10) {
+			repairAmount = 10 - this->_hitPoints;
+		}
+
+		this->_hitPoints += repairAmount;
 		this->_energyPoints--;
+
+		std::cout << "ClapTrap " << this->_name << " repairs itself for " << repairAmount << " hit points! Remaining hit points: " << this->_hitPoints << std::endl;
 	}
 
-	// if (this->_hitPoints > 0 && this->_energyPoints > 0) {
-	// 	this->_hitPoints += amount;
-	// 	this->_energyPoints--;
-	// 	std::cout << "ClapTrap " << this->_name << " repairs itself for " << amount << " hit points! Remaining hit points: " << this->_hitPoints << std::endl;
-	// } else {
-	// 	std::cout << "ClapTrap " << this->_name << " cannot repair because it has no hit points or energy points left!" << std::endl;
-	// }
 }

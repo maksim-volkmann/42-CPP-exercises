@@ -6,12 +6,12 @@
 #    By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/15 14:48:08 by mvolkman          #+#    #+#              #
-#    Updated: 2024/09/05 11:08:15 by mvolkman         ###   ########.fr        #
+#    Updated: 2024/09/06 10:31:46 by mvolkman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = main
-SRC = main.cpp
+SRC = main.cpp ClapTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++17
