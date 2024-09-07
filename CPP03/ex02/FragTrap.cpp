@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 10:31:00 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/07 11:53:55 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/07 12:06:01 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ FragTrap::FragTrap(const std::string& name) : ClapTrap(name) {
 	std::cout << "FragTrap " << _name << " has been created!" << std::endl;
 }
 
+//TODO: Do you need to assign values again? Because it works in the base class.
 FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other) {
 	std::cout << "FragTrap " << this->_name << " has been copied!" << std::endl;
 
