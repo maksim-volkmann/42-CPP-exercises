@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/06 12:39:11 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/07 10:12:54 by mvolkman         ###   ########.fr       */
+/*   Created: 2024/09/07 14:08:55 by mvolkman          #+#    #+#             */
+/*   Updated: 2024/09/07 14:18:14 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-#define SCAVTRAP_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-// base
-#include "ClapTrap.hpp"
+#include <iostream>
 
-// inherit from base
-class ScavTrap : public ClapTrap {
+class Animal {
+protected:
+	std::string type;
+
 public:
-	ScavTrap(const std::string& name);
-	ScavTrap(const ScavTrap& other);
-	ScavTrap& operator=(const ScavTrap& other);
-	~ScavTrap();
+	Animal() : type("Animal"){}
 
-	void attack(const std::string& target);
-	void guardGate();
+	virtual ~Animal() {
+		std::cout << "Animal destructor called" << std::endl;
+	}
+
+	std::string getType() const {
+		return type;
+	}
+
+	virtual void makeSound() const {
+		std::cout << "Animal sound" << std::endl;
+	}
 };
 
 #endif
