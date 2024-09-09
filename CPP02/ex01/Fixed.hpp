@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 09:40:00 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/07 12:22:53 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/09 14:00:06 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Fixed{
 private:
 	int _fixedNumber;
-	static const int fractionalBits = 8;
+	static const int _fractionalBits = 8;
 
 public:
 	Fixed();
