@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 10:30:57 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/07 11:29:14 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/10 22:26:25 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ public:
 	FragTrap& operator=(const FragTrap& other);
 	~FragTrap();
 
-	void attack(const std::string& target);
 	void highFivesGuys(void);
 };
 

@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 11:09:24 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/10 16:42:45 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/10 22:03:32 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 		this->_hitPoints = other._hitPoints;
 		this->_energyPoints = other._energyPoints;
 		this->_attackDamage = other._attackDamage;
+		std::cout << "ClapTrap " << this->_name << " has been assigned!" << std::endl;
 	}
-	std::cout << "ClapTrap " << this->_name << " has been assigned!" << std::endl;
 	return *this;
 }
 
