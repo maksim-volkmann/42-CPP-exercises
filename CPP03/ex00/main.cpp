@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 09:54:30 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/06 11:08:17 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/10 16:03:30 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,29 @@ int	main() {
 	ClapTrap olivia("Olivia");
 	ClapTrap danial("Danial");
 	ClapTrap tom("Tom");
+
 	std::cout << "-----------------------------" << std::endl;
-	arnold.takeDamage(10);
+
+	arnold.takeDamage(100);
 	arnold.beRepaired(5);
+
 	std::cout << "-----------------------------" << std::endl;
+
 	olivia.takeDamage(2);
 	olivia.beRepaired(5);
+
 	std::cout << "-----------------------------" << std::endl;
+
 	danial.takeDamage(9);
 	danial.beRepaired(5);
+
 	std::cout << "-----------------------------" << std::endl;
+
 	danial.beRepaired(5);
 	danial.beRepaired(10);
+
 	std::cout << "-----------------------------" << std::endl;
+
 	tom.attack("target");
 	tom.attack("target");
 	tom.attack("target");
@@ -43,6 +53,8 @@ int	main() {
 	tom.attack("target");
 	tom.attack("target");
 	tom.beRepaired(1);
+
 	std::cout << "-----------------------------" << std::endl;
+
 	return (0);
 }
