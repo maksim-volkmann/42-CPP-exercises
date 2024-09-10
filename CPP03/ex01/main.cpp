@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 09:54:30 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/07 10:14:54 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/10 16:36:13 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int main() {
 
 	std::cout << "-----------------------------" << std::endl;
 
-	arnold.attack("target1");
-	olivia.attack("target2");
+	arnold.attack("target");
+	olivia.attack("target");
 
 	std::cout << "-----------------------------" << std::endl;
 
@@ -40,20 +40,19 @@ int main() {
 
 	// Test energy
 	for (int i = 0; i < 50; ++i) {
-		olivia.attack("target");
+		olivia.attack("target1");
 	}
 
 	std::cout << "-----------------------------" << std::endl;
 
-	olivia.attack("target3");
+	olivia.attack("target1");
 	olivia.beRepaired(10);
 
 	std::cout << "-----------------------------" << std::endl;
 
-	// Test copying and assignment
-	ScavTrap danial(olivia);  // Copy constructor
 	ScavTrap morty("Morty");
-	morty = olivia;  // Copy assignment
+	morty = olivia;
+	morty.attack("target");
 
 	std::cout << "-----------------------------" << std::endl;
 
