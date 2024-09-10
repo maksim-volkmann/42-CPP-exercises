@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 09:40:00 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/10 11:23:35 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/10 15:09:08 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ private:
 
 public:
 	Fixed();
-	// Fixed(const Fixed& other);
+	Fixed(const Fixed& other);
 	Fixed& operator=(const Fixed& other);
 	Fixed(const int integer);
 	Fixed(const float number);

@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 09:40:39 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/10 12:08:02 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/10 15:09:33 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ Fixed::Fixed(const float number) : _fixedNumber(roundf(number * (1 << _fractiona
 	std::cout << "Float constructor called" << std::endl;
 }
 
-// Fixed::Fixed(const Fixed& other) {
-// 	std::cout << "Copy constructor called" << std::endl;
-// 	*this = other;
-// }
+Fixed::Fixed(const Fixed& other) {
+	std::cout << "Copy constructor called" << std::endl;
+	*this = other;
+}
 
 Fixed& Fixed::operator=(const Fixed& other) {
 	std::cout << "Copy assignment operator called" << std::endl;
