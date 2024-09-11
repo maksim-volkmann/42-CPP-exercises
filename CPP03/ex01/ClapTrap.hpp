@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 11:09:22 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/10 21:38:11 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/11 09:50:24 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ protected:
 	unsigned int _attackDamage;
 
 public:
+	ClapTrap() = default;
 	ClapTrap(const std::string& name);
 	ClapTrap(const ClapTrap& other);
 	ClapTrap& operator=(const ClapTrap& other);

@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 09:54:30 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/10 16:36:13 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/11 10:27:41 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,13 @@ int main() {
 	std::cout << "-----------------------------" << std::endl;
 
 	// Test energy
-	for (int i = 0; i < 50; ++i) {
-		olivia.attack("target1");
+	for (int i = 0; i < 30; ++i) {
+		olivia.attack("target");
 	}
 
 	std::cout << "-----------------------------" << std::endl;
 
-	olivia.attack("target1");
+	olivia.attack("target");
 	olivia.beRepaired(10);
 
 	std::cout << "-----------------------------" << std::endl;

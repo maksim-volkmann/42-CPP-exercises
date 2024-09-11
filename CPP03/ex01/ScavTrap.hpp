@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 12:39:11 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/07 10:12:54 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/11 09:52:56 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 // inherit from base
 class ScavTrap : public ClapTrap {
 public:
+	ScavTrap() = default;
 	ScavTrap(const std::string& name);
 	ScavTrap(const ScavTrap& other);
 	ScavTrap& operator=(const ScavTrap& other);
