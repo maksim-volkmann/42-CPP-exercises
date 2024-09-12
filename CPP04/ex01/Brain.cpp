@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 15:13:51 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/11 17:32:04 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/12 08:24:57 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,16 @@ Brain::Brain(const Brain& other) {
 		_ideas[i] = other._ideas[i];
 	}
 	std::cout << "Brain copy constructor is called!" << std::endl;
+}
+
+Brain& Brain::operator=(const Brain& other) {
+	if (this != &other) {
+		for (int i = 0; i < 100; ++i) {
+			_ideas[i] = other._ideas[i];
+		}
+	}
+	std::cout << "Brain assignment operator is called!" << std::endl;
+	return *this;
 }
 
 Brain::~Brain() {
