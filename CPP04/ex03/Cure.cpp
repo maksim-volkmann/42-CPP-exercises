@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/15 13:19:14 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/18 21:28:06 by mvolkman         ###   ########.fr       */
+/*   Created: 2024/09/15 14:02:23 by mvolkman          #+#    #+#             */
+/*   Updated: 2024/09/18 21:27:55 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
+#include "Cure.hpp"
 #include <iostream>
 
-// Constructor - set the type to "ice"
-Ice::Ice() : AMateria("ice") {}
+// Constructor - set the type to "cure"
+Cure::Cure() : AMateria("cure") {}
 
 // Copy constructor
-Ice::Ice(Ice const & other) : AMateria(other) {}
+Cure::Cure(Cure const & other) : AMateria(other) {}
 
 // Assignment operator
-Ice & Ice::operator=(Ice const & other) {
+Cure & Cure::operator=(Cure const & other) {
 	if (this != &other) {
 		AMateria::operator=(other);
 	}
@@ -28,14 +28,14 @@ Ice & Ice::operator=(Ice const & other) {
 }
 
 // Destructor
-Ice::~Ice() {}
+Cure::~Cure() {}
 
-// Clone function - return a new instance of Ice
-AMateria* Ice::clone() const {
-	return new Ice(*this);
+// Clone function - return a new instance of Cure
+AMateria* Cure::clone() const {
+	return new Cure(*this);
 }
 
 // Use function - print the required message
-void Ice::use(ICharacter& target) {
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+void Cure::use(ICharacter& target) {
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }

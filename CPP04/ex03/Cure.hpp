@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.hpp                                            :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/15 13:19:20 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/18 21:25:54 by mvolkman         ###   ########.fr       */
+/*   Created: 2024/09/15 14:02:20 by mvolkman          #+#    #+#             */
+/*   Updated: 2024/09/18 21:27:38 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ICE_HPP
-#define ICE_HPP
+#ifndef CURE_HPP
+#define CURE_HPP
 
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class Ice : public AMateria {
+class Cure : public AMateria {
 public:
-	Ice();
-	Ice(Ice const & other);
-	Ice & operator=(Ice const & other);
-	virtual ~Ice();
+	Cure();
+	Cure(Cure const & other);
+	Cure & operator=(Cure const & other);
+	virtual ~Cure();
 
-	virtual AMateria* clone() const; // Return a new Ice object
-	virtual void use(ICharacter& target); // Use the Ice Materia on a character
+	virtual AMateria* clone() const; // Return a new Cure object
+	virtual void use(ICharacter& target); // Use the Cure Materia on a character
 };
 
 #endif

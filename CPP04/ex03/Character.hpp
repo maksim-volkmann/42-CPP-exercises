@@ -6,13 +6,35 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 14:01:45 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/17 16:18:13 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/18 21:44:34 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ICharacter.hpp"
-
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
+
+#include "ICharacter.hpp"
+#include "AMateria.hpp"
+#include <string>
+
+class Character : public ICharacter {
+private:
+	std::string _name;
+	AMateria* _inventory[4];
+	AMateria* _uneqMater[100];
+	int _uneqMaterCount;
+
+public:
+	Character();
+	Character(std::string const & name);
+	Character(Character const & other);
+	Character & operator=(Character const & other);
+	virtual ~Character();
+
+	virtual std::string const & getName() const;
+	virtual void equip(AMateria* m);
+	virtual void unequip(int idx);
+	virtual void use(int idx, ICharacter& target);
+};
 
 #endif
