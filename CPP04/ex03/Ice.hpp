@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 13:19:20 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/18 21:25:54 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/19 12:26:51 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ public:
 	Ice & operator=(Ice const & other);
 	virtual ~Ice();
 
-	virtual AMateria* clone() const; // Return a new Ice object
-	virtual void use(ICharacter& target); // Use the Ice Materia on a character
+	virtual AMateria* clone() const;
+	virtual void use(ICharacter& target);
 };
 
 #endif

@@ -6,15 +6,16 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:11:16 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/11 16:01:25 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:45:46 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog() {
-	_type = "Dog";
 	std::cout << "Dog default constructor is called!" << std::endl;
+	_type = "Dog";
+
 }
 
 Dog::Dog(const Dog& other) : Animal(other) {

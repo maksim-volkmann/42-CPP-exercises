@@ -6,11 +6,14 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 11:18:49 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/17 14:09:14 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/19 13:44:43 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
+
+AMateria::AMateria() : _type("unknown"){}
 
 AMateria::AMateria(std::string const & type) : _type(type){}
 
@@ -30,6 +33,6 @@ std::string const &AMateria::getType() const {
 }
 
 void AMateria::use(ICharacter& target) {
-	//TODO: Not sure what is here for now just test print
-	std::cout << "AMateria use function to target a target?" << &target << std::endl;
+	// This is fallback function, if "Ice" or "Cure" "use" function is not implemented.
+	std::cout << "AMateria object use \"use\" function at " << target.getName() << std::endl;
 }

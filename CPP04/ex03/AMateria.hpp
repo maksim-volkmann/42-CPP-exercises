@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 11:19:14 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/17 14:03:52 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/19 13:26:19 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ protected:
 	std::string _type;
 
 public:
-	AMateria() = default;
+	AMateria();
 	AMateria(std::string const & type);
 	AMateria(AMateria const & other);
 	AMateria& operator=(AMateria const & other);

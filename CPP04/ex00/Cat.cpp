@@ -6,15 +6,15 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:11:48 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/11 16:01:26 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:45:55 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
 Cat::Cat() {
-	_type = "Cat";
 	std::cout << "Cat default constructor is called!" << std::endl;
+	_type = "Cat";
 }
 
 Cat::Cat(const Cat& other) : Animal(other) {

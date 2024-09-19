@@ -6,28 +6,29 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:11:16 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/12 12:06:06 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:33:29 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 Dog::Dog() {
+	std::cout << "Dog default constructor is called!" << std::endl;
 	_brain = new Brain();
 	_type = "Dog";
-	std::cout << "Dog default constructor is called!" << std::endl;
+
 }
 
-// Dog::Dog(const Dog& other) : Animal(other) {
-// 	std::cout << "Dog copy constructor is called!" << std::endl;
-// 	_brain = new Brain(*other._brain);
-// }
-
-// shahow copy example
 Dog::Dog(const Dog& other) : Animal(other) {
 	std::cout << "Dog copy constructor is called!" << std::endl;
-	this->_brain = other._brain;
+	_brain = new Brain(*other._brain);
 }
+
+// shahow copy example
+// Dog::Dog(const Dog& other) : Animal(other) {
+// 	std::cout << "Dog copy constructor is called!" << std::endl;
+// 	this->_brain = other._brain;
+// }
 
 Dog& Dog::operator=(const Dog& other) {
 	std::cout << "Dog copy assignment operator is called!" << std::endl;

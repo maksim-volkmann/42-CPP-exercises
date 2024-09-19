@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 14:04:30 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/11 16:25:21 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:49:38 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,14 @@ int main()
 	delete meta;
 	delete j;
 	delete i;
-
+	std::cout << "-----------------------------" << std::endl;
 	const WrongAnimal* wrongMeta = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();
 	wrongMeta->makeSound();
 	wrongCat->makeSound();
-
+	std::cout << "-----------------------------" << std::endl;
 	delete wrongMeta;
 	delete wrongCat;
+
 	return 0;
 }

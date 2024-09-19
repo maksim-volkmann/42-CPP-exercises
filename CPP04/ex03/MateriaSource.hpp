@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 21:00:43 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/18 21:01:09 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/19 13:14:52 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	MateriaSource & operator=(MateriaSource const & other);
 	virtual ~MateriaSource();
 
-	virtual void learnMateria(AMateria* m);
+	virtual void learnMateria(AMateria*);
 	virtual AMateria* createMateria(std::string const & type);
 };
 

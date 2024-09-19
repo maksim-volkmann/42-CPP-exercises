@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 14:02:20 by mvolkman          #+#    #+#             */
-/*   Updated: 2024/09/18 21:27:38 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/09/19 12:31:01 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ public:
 	Cure & operator=(Cure const & other);
 	virtual ~Cure();
 
-	virtual AMateria* clone() const; // Return a new Cure object
-	virtual void use(ICharacter& target); // Use the Cure Materia on a character
+	virtual AMateria* clone() const;
+	virtual void use(ICharacter& target);
 };
 
 #endif
