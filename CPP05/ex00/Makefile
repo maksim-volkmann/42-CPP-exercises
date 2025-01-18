@@ -1,8 +1,9 @@
 NAME = main
-SRC = main.cpp
+SRC = main.cpp Bureaucrat.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
-FLAGS = -Wall -Wextra -Werror -std=c++17
+FLAGS = -std=c++17
+# FLAGS = -Wall -Wextra -Werror -std=c++17
 
 all: $(NAME)
 

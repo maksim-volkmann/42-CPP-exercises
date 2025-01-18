@@ -3,38 +3,35 @@
 
 #include <iostream>
 #include <stdexcept>
-#include <string>
 
 class Bureaucrat {
 private:
-	const std::string name;
-	int grade;
+	const std::string _name;
+	int _grade;
 
 public:
-	Bureaucrat(); // default constructor
-	Bureaucrat(const std::string& name, int grade); // Parameterized constructor
-	Bureaucrat(const Bureaucrat& other); // Copy constructor
-	Bureaucrat& operator=(const Bureaucrat &other); // Copy assignment operator
-	~Bureaucrat(); // Destructor
 
-	//getters
-	const std::string& getName() const;
-	int getGrade() const;
+	// Default constructor
+	Bureaucrat();
 
-	void incrementGrade();
-	void decrementGrade();
+	// Parameterized constructor
+	Bureaucrat(const std::string& name, int grade);
 
+	//Bureaucrat::GradeTooHighException
+	//
 	class GradeTooHighException : public std::exception {
+	public:
 		const char* what() const noexcept override;
 	};
 
 	class GradeTooLowException : public std::exception {
+	public:
 		const char* what() const noexcept override;
 	};
 
-
+	// getters
+	const std::string& getName() const;
+	int getGrade() const;
 };
-
-std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
 
 #endif
