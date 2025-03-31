@@ -1,37 +1,35 @@
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+#pragma once
 
 #include <iostream>
-#include <stdexcept>
+#include <string>
+#include <exception>
 
-class Bureaucrat {
+class Bureaucrat{
 private:
-	const std::string _name;
-	int _grade;
+	const std::string name_;
+	int grade_;
 
 public:
-
-	// Default constructor
 	Bureaucrat();
-
-	// Parameterized constructor
 	Bureaucrat(const std::string& name, int grade);
+	~Bureaucrat();
+	Bureaucrat(const Bureaucrat&);
+	Bureaucrat& operator=(const Bureaucrat&);
 
-	//Bureaucrat::GradeTooHighException
-	//
+	const std::string& getName() const;
+	int getGrade() const;
+
+	void increment();
+	void decrement();
+
 	class GradeTooHighException : public std::exception {
-	public:
 		const char* what() const noexcept override;
 	};
 
 	class GradeTooLowException : public std::exception {
-	public:
 		const char* what() const noexcept override;
 	};
-
-	// getters
-	const std::string& getName() const;
-	int getGrade() const;
 };
 
-#endif
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
+
