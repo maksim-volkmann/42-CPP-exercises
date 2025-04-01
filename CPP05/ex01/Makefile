@@ -1,5 +1,5 @@
 NAME = Bureaucrat
-SRC = main.cpp Bureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 # FLAGS = -std=c++17

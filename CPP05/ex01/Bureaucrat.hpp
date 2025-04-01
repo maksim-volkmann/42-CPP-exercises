@@ -2,9 +2,11 @@
 
 #include <string>
 #include <exception>
-#include <stdexcept>
+#include <stdexcept> // todo: do i need this?
 
 #define RED(text) "\033[31m" << text << "\033[0m"
+
+class Form;
 
 class Bureaucrat{
 private:
@@ -31,6 +33,8 @@ public:
 	class GradeTooLowException : public std::exception {
 		public: const char* what() const noexcept override;
 	};
+
+	void signForm(Form&);
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);
