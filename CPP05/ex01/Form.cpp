@@ -2,10 +2,10 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
 
-Form::Form(): name_("NoName"), isSigned_(false), requiredGradeToSign_(150), requiredGradeToExecute_(150){}
+Form::Form(): _name("NoName"), _isSigned(false), requiredGradeToSign_(150), requiredGradeToExecute_(150){}
 
 Form::Form(const std::string& name, int requiredGradeToSign, int requiredGradeToExecute)
-	: name_(name), isSigned_(false), requiredGradeToSign_(requiredGradeToSign),
+	: _name(name), _isSigned(false), requiredGradeToSign_(requiredGradeToSign),
 	requiredGradeToExecute_(requiredGradeToExecute){
 	if(requiredGradeToSign < 1 || requiredGradeToExecute < 1){
 		throw GradeTooHighException();
@@ -17,7 +17,7 @@ Form::Form(const std::string& name, int requiredGradeToSign, int requiredGradeTo
 Form::~Form(){}
 
 Form::Form(const Form& other)
-	: name_(other.name_), isSigned_(other.isSigned_), requiredGradeToSign_(other.requiredGradeToSign_),
+	: _name(other._name), _isSigned(other._isSigned), requiredGradeToSign_(other.requiredGradeToSign_),
 	requiredGradeToExecute_(other.requiredGradeToExecute_){
 
 }
@@ -25,17 +25,17 @@ Form::Form(const Form& other)
 Form& Form::operator=(const Form& other){
 	if(this != &other){
 		//cannot copy anything else, because everything else is const
-		isSigned_ = other.isSigned_;
+		_isSigned = other._isSigned;
 	}
 	return *this;
 }
 
 const std::string& Form::getName() const{
-	return name_;
+	return _name;
 }
 
 bool Form::isSigned() const{
-	return isSigned_;
+	return _isSigned;
 }
 
 int Form::getRequiredGradeToSign() const{
@@ -50,7 +50,7 @@ void Form::beSigned(const Bureaucrat& b){
 	if(b.getGrade() > requiredGradeToSign_){
 		throw GradeTooLowException();
 	}
-	isSigned_ = true;
+	_isSigned = true;
 }
 
 const char* Form::GradeTooHighException::what() const noexcept {

@@ -8,7 +8,7 @@
 
 class Bureaucrat;
 
-class Form{
+class AForm{
 private:
 	const std::string _name;
 	bool _isSigned;
@@ -16,11 +16,11 @@ private:
 	const int requiredGradeToExecute_;
 
 public:
-	Form();
-	Form(const std::string& name, int requiredGradeToSign, int requiredGradeToExecute);
-	~Form();
-	Form(const Form&);
-	Form& operator=(const Form&);
+	AForm();
+	AForm(const std::string& name, int requiredGradeToSign, int requiredGradeToExecute);
+	virtual ~AForm();
+	AForm(const AForm&);
+	AForm& operator=(const AForm&);
 
 	const std::string& getName() const;
 	bool isSigned() const;
@@ -36,7 +36,13 @@ public:
 	class GradeTooLowException : public std::exception {
 		public: const char* what() const noexcept override;
 	};
+
+	class FormNotSignedException : public std::exception {
+		public: const char* what() const noexcept override;
+	};
+
+	virtual void execute(const Bureaucrat& executor) const = 0;
 };
 
-std::ostream& operator<<(std::ostream& os, const Form& form);
+std::ostream& operator<<(std::ostream& os, const AForm& AForm);
 
