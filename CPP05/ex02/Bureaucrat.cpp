@@ -60,7 +60,10 @@ void Bureaucrat::signForm(AForm& f){
 	try{
 		f.beSigned(*this);
 		std::cout << _name << " signed " << f.getName() << "." << std::endl;
-	} catch (const std::exception& e) {
+	}  catch (const AForm::GradeTooHighException& e) {
+		std::cout << _name << " could not sign " << f.getName()
+			<< " because " << e.what() << std::endl;
+	} catch (const AForm::GradeTooLowException& e) {
 		std::cout << _name << " could not sign " << f.getName()
 			<< " because " << e.what() << std::endl;
 	}
