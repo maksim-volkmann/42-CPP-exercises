@@ -9,12 +9,10 @@
 int main() {
 	Intern intern;
 
-	// Valid forms (mixed cases)
 	AForm* form1 = intern.makeForm("Shrubbery Creation", "Garden");
 	AForm* form2 = intern.makeForm("robotomy request", "Bender");
 	AForm* form3 = intern.makeForm("PRESIDENTIAL pardon", "Zaphod");
 
-	// Invalid form
 	AForm* invalid = intern.makeForm("fake form", "Target");
 
 	if (invalid) {

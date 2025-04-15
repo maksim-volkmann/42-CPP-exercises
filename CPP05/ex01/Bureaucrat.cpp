@@ -49,11 +49,11 @@ void Bureaucrat::decrement(){
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const noexcept {
-	return "\033[31mGRADE IS TOO HIGH!\033[0m";
+	return "GRADE IS TOO HIGH!";
 }
 
 const char* Bureaucrat::GradeTooLowException::what() const noexcept {
-	return "\033[31mGRADE IS TOO LOW!\033[0m";
+	return "GRADE IS TOO LOW!";
 }
 
 void Bureaucrat::signForm(Form& f){

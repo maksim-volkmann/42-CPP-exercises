@@ -1,8 +1,7 @@
-NAME = Bureaucrat
+NAME = main
 SRC = main.cpp Bureaucrat.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
-# FLAGS = -std=c++17
 FLAGS = -Wall -Wextra -Werror -std=c++17
 
 all: $(NAME)

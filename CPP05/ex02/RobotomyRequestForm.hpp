@@ -14,6 +14,6 @@ public:
 	RobotomyRequestForm(const RobotomyRequestForm&);
 	RobotomyRequestForm& operator=(const RobotomyRequestForm&);
 
-	void execute(const Bureaucrat& execute) const;
+	void execute(const Bureaucrat& executor) const;
 
 };

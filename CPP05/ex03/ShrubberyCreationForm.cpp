@@ -1,6 +1,6 @@
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
-#include <iostream> // todo
+#include <iostream>
 #include <string>
 
 ShrubberyCreationForm::ShrubberyCreationForm()

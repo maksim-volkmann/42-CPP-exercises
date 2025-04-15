@@ -1,10 +1,7 @@
 #pragma once
 
 #include <string>
-#include <exception>
-#include <stdexcept> // todo: do i need this?
-
-#define RED(text) "\033[31m" << text << "\033[0m"
+#include <stdexcept>
 
 class Form;
 

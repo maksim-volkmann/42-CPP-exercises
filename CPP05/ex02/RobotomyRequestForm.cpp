@@ -1,6 +1,6 @@
 #include "RobotomyRequestForm.hpp"
 #include <fstream>
-#include <iostream> // todo
+#include <iostream>
 
 RobotomyRequestForm::RobotomyRequestForm()
 	: AForm("Robotomy Request", 72, 45), _target("No target"){}
@@ -27,7 +27,7 @@ void RobotomyRequestForm::execute(const Bureaucrat& executor) const{
 	if(executor.getGrade() > this->getRequiredGradeToExecute())
 		throw AForm::GradeTooLowException();
 
-	std::cout << "~DRILLING NOISES~: BRRRRRRRRRRR!!!" << std::endl;
+	std::cout << "~~@~~DRILLING NOISES~: BRRRRRRRRRRR~~@~~" << std::endl;
 
 	std::srand(std::time(0));
 

@@ -1,10 +1,7 @@
 #pragma once
 
 #include <string>
-#include <exception>
 #include <stdexcept>
-
-#define RED(text) "\033[31m" << text << "\033[0m"
 
 class Bureaucrat{
 private:

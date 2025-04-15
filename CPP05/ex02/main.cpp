@@ -7,30 +7,56 @@
 
 int main() {
 	try {
-		Bureaucrat alice("Alice", 137);
+		Bureaucrat Jerry("Jerry", 120);
+		std::cout << Jerry << std::endl;
 		ShrubberyCreationForm garden("Garden");
-		alice.signForm(garden);
-		alice.executeForm(garden);
+		Jerry.signForm(garden);
+		Jerry.executeForm(garden);
 	} catch (const std::exception& e) {
 		std::cerr << "EXCEPTION ERROR: " << e.what() << std::endl;
 	}
+	std::cout << ".............." << std::endl;
 
 	try {
-		Bureaucrat bob("Bob", 30);
-		RobotomyRequestForm robotomy("Marvin");
+		Bureaucrat Rick("Rick", 138);
+		std::cout << Rick << std::endl;
+		ShrubberyCreationForm forest("Forest");
+		Rick.signForm(forest);
+		Rick.executeForm(forest);
+	} catch (const std::exception& e) {
+		std::cerr << "EXCEPTION ERROR: " << e.what() << std::endl;
+	}
+	std::cout << ".............." << std::endl;
 
-		bob.signForm(robotomy);
-		bob.executeForm(robotomy);
+	try {
+		Bureaucrat Morty("Morty", 30);
+		std::cout << Morty << std::endl;
+		RobotomyRequestForm robotomy("Bender");
+
+		Morty.signForm(robotomy);
+		Morty.executeForm(robotomy);
 	} catch (const std::exception& e) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
+	std::cout << ".............." << std::endl;
 
 	try {
-		Bureaucrat rick("Rick", 1); // Highest grade
-		PresidentialPardonForm pardon("John Doe");
+		Bureaucrat Birdperson("Birdperson", 73);
+		std::cout << Birdperson << std::endl;
+		RobotomyRequestForm robotomy1("Evil Morty");
+		Birdperson.signForm(robotomy1);
+		Birdperson.executeForm(robotomy1);
+	} catch (const std::exception& e) {
+		std::cerr << "EXCEPTION ERROR: " << e.what() << std::endl;
+	}
+	std::cout << ".............." << std::endl;
 
-		rick.signForm(pardon);   // Signs successfully (1 ≤ 25)
-		rick.executeForm(pardon); // Executes successfully (1 ≤ 5)
+	try {
+		Bureaucrat Summer("Summer", 1);
+		std::cout << Summer << std::endl;
+		PresidentialPardonForm pardon("Jerry");
+		Summer.signForm(pardon);
+		Summer.executeForm(pardon);
 	} catch (const std::exception& e) {
 		std::cerr << "Error: " << e.what() << std::endl;
 	}
