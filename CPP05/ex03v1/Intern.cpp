@@ -46,7 +46,7 @@ AForm* Intern::makeForm(const std::string& formName, const std::string& target) 
 	for (int i = 0; i < 3; ++i) {
 		if (lowerName == formTable[i].name) {
 			std::cout << "Intern creates " << formName << std::endl;
-			return (this->*formTable[i].creator)(target); // Call via member function pointer
+			return (this->*formTable[i].creator)(target);
 		}
 	}
 
