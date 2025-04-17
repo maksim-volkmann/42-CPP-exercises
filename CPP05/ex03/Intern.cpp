@@ -16,7 +16,7 @@ Intern::Intern(){}
 
 Intern::~Intern(){}
 
-Intern::Intern(const Intern& other){ //todo: can I remove other?
+Intern::Intern(const Intern& other){
 	(void)other;
 }
 
