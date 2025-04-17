@@ -12,7 +12,7 @@ private:
 
 	struct FormEntry {
 		const char* name;
-		FormCreator creator;
+		FormCreator creatorFunction;
 	};
 
 	static const FormEntry formTable[3];
