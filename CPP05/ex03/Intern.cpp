@@ -37,6 +37,11 @@ AForm* Intern::createPresidential(const std::string& target) const {
 	return new PresidentialPardonForm(target);
 }
 
+
+const char* Intern::FormNameNotFound::what() const noexcept {
+	return "FORM WITH THAT NAME DOES NOT EXISTS!";
+}
+
 AForm* Intern::makeForm(const std::string& formName, const std::string& target) {
 	std::string lowerName;
 	for (size_t i = 0; i < formName.length(); ++i) {
@@ -45,11 +50,16 @@ AForm* Intern::makeForm(const std::string& formName, const std::string& target) 
 
 	for (int i = 0; i < 3; ++i) {
 		if (lowerName == formTable[i].name) {
-			std::cout << "Intern creates " << formName << std::endl;
-			return (this->*formTable[i].creator)(target); // Call via member function pointer
+			try{
+				std::cout << "Intern creates: " << formName << std::endl;
+				return (this->*formTable[i].creatorFunction)(target);
+			} catch (const std::exception& e){
+				std::cerr << "Form creation failed: " << e.what() << std::endl;
+				throw;
+			}
+
 		}
 	}
 
-	std::cerr << "Error: Form does not exist: " << formName << "!" << std::endl;
-	return nullptr;
+	throw FormNameNotFound();
 }

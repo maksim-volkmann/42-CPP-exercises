@@ -3,8 +3,6 @@
 #include <string>
 #include <stdexcept>
 
-#define RED(text) "\033[31m" << text << "\033[0m"
-
 class AForm;
 
 class Bureaucrat{
@@ -35,7 +33,7 @@ public:
 
 	void signForm(AForm&);
 
-	void executeForm(const AForm& form) const;
+	void executeForm(const AForm&) const;
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& b);

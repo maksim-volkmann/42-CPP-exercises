@@ -1,6 +1,6 @@
+#include "AForm.hpp"
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "AForm.hpp"
 
 AForm::AForm(): _name("NoName"), _isSigned(false), requiredGradeToSign_(150), requiredGradeToExecute_(150){}
 

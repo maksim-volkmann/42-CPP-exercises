@@ -27,7 +27,7 @@ void RobotomyRequestForm::execute(const Bureaucrat& executor) const{
 	if(executor.getGrade() > this->getRequiredGradeToExecute())
 		throw AForm::GradeTooLowException();
 
-	std::cout << "~DRILLING NOISES~: BRRRRRRRRRRR!!!" << std::endl;
+	std::cout << "~~@~~DRILLING NOISES~: BRRRRRRRRRRR~~@~~" << std::endl;
 
 	std::srand(std::time(0));
 

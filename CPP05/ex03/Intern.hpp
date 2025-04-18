@@ -11,7 +11,7 @@ private:
 
 	struct FormEntry {
 		const char* name;
-		FormCreator creator;
+		FormCreator creatorFunction;
 	};
 
 	static const FormEntry formTable[3];
@@ -25,6 +25,10 @@ public:
 	~Intern();
 	Intern(const Intern&);
 	Intern& operator=(const Intern&);
+
+	class FormNameNotFound : public std::exception {
+		public: const char* what() const noexcept override;
+	};
 
 	AForm* makeForm(const std::string& formName, const std::string& target);
 

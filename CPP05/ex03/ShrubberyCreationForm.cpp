@@ -1,7 +1,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
-#include <iostream>
 #include <string>
+#include <iostream>
 
 ShrubberyCreationForm::ShrubberyCreationForm()
 	: AForm("Shrubbery Creation Form", 145, 137), _target("No target"){}
