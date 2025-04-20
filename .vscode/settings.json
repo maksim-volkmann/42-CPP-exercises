@@ -73,6 +73,10 @@
 		"compare": "cpp",
 		"concepts": "cpp",
 		"memory_resource": "cpp",
-		"filesystem": "cpp"
+		"filesystem": "cpp",
+		"execution": "cpp",
+		"print": "cpp",
+		"queue": "cpp",
+		"forward_list": "cpp"
 	}
 }
