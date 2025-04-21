@@ -4,6 +4,8 @@ OBJ = $(SRC:.cpp=.o)
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++17
 
+// todo: use CXX?
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
