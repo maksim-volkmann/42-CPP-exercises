@@ -17,12 +17,12 @@ ScalarConverter& ScalarConverter::operator=(const ScalarConverter &other){
 };
 
 // Char detection
-bool ScalarConverter::isCharLiteral(const std::string& literal) {
+bool ScalarConverter::isChar(const std::string& literal) {
 	return literal.length() == 3 && literal[0] == '\'' && literal[2] == '\'';
 }
 
 // Special literals detection
-bool ScalarConverter::isSpecialLiteral(const std::string& literal) {
+bool ScalarConverter::isSpecial(const std::string& literal) {
 	return literal == "nan" || literal == "nanf" ||
 			literal == "inf" || literal == "inff" ||
 			literal == "+inf" || literal == "+inff" ||
@@ -106,9 +106,9 @@ void ScalarConverter::convert(const std::string& literal) {
 		return;
 	}
 
-	if (isCharLiteral(literal)) {
+	if (isChar(literal)) {
 		handleChar(literal);
-	} else if (isSpecialLiteral(literal)) {
+	} else if (isSpecial(literal)) {
 		handleSpecial(literal);
 	} else {
 		handleNumeric(literal);
