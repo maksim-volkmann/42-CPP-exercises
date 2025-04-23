@@ -1,5 +1,6 @@
 {
 	"files.associations": {
+		"*.c": "c",
 		"__bit_reference": "cpp",
 		"__hash_table": "cpp",
 		"__locale": "cpp",
@@ -44,6 +45,7 @@
 		"unordered_map": "cpp",
 		"variant": "cpp",
 		"vector": "cpp",
-		"algorithm": "cpp"
+		"algorithm": "cpp",
+		"ostream": "cpp"
 	}
 }
