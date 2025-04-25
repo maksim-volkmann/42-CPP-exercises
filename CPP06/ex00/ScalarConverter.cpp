@@ -5,6 +5,11 @@
 #include <iostream>
 #include <sstream>
 
+ScalarConverter::ScalarConverter() {}
+ScalarConverter::ScalarConverter(const ScalarConverter&) {}
+ScalarConverter& ScalarConverter::operator=(const ScalarConverter&) { return *this; }
+ScalarConverter::~ScalarConverter() {}
+
 bool ScalarConverter::isChar(const std::string& literal) {
 	return (literal.size() == 3 && literal[0] == '\'' && literal[2] == '\'');
 }
@@ -74,12 +79,12 @@ void ScalarConverter::handleNumeric(const std::string& literal) {
 	}
 
 	float f = static_cast<float>(d);
-	std::cout << "float: " << f;
+	std::cout << std::setprecision(7) << "float: " << f;
 	if (f == static_cast<long>(f) && !isinf(f))
 		std::cout << ".0";
 	std::cout << "f" << std::endl;
 
-	std::cout << "double: " << d;
+	std::cout << std::setprecision(15) << "double: " << d;
 	if (d == static_cast<long>(d) && !isinf(d))
 		std::cout << ".0";
 	std::cout << std::endl;
