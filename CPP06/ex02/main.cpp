@@ -5,7 +5,6 @@
 #include <random>
 #include <memory>
 
-// Randomly generates an instance of A, B, or C and returns as Base*
 Base* generate() {
 	static std::random_device rd;
 	static std::mt19937 gen(rd());
@@ -18,7 +17,6 @@ Base* generate() {
 	}
 }
 
-// Identifies the real type from a Base pointer
 void identify(Base* p) {
 	if (dynamic_cast<A*>(p))
 		std::cout << "A" << std::endl;
@@ -30,7 +28,6 @@ void identify(Base* p) {
 		std::cout << "Unknown" << std::endl;
 }
 
-// Identifies the real type from a Base reference (no pointer use inside)
 void identify(Base& p) {
 	try {
 		(void)dynamic_cast<A&>(p);

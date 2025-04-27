@@ -15,7 +15,6 @@ private:
 	static void handleSpecial(const std::string& literal);
 	static void handleNumeric(const std::string& literal);
 
-
 public:
 	static void convert(const std::string& literal);
 

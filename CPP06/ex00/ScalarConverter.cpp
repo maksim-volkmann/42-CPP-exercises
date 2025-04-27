@@ -40,12 +40,14 @@ void ScalarConverter::handleSpecial(const std::string& literal) {
 	std::cout << "double: " << base << std::endl;
 }
 
+
+//todo: logic seems fucked. Need to refactor. Something is not clean.
 void ScalarConverter::handleNumeric(const std::string& literal) {
 	std::string baseStr = literal;
-	bool isFloat = false;
+	// bool isFloat = false;
 
 	if (!baseStr.empty() && (baseStr.back() == 'f' || baseStr.back() == 'F')) {
-		isFloat = true;
+		// isFloat = true;
 		baseStr = baseStr.substr(0, baseStr.size() - 1);
 	}
 
