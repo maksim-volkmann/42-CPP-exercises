@@ -40,14 +40,10 @@ void ScalarConverter::handleSpecial(const std::string& literal) {
 	std::cout << "double: " << base << std::endl;
 }
 
-
-//todo: logic seems fucked. Need to refactor. Something is not clean.
 void ScalarConverter::handleNumeric(const std::string& literal) {
 	std::string baseStr = literal;
-	// bool isFloat = false;
 
 	if (!baseStr.empty() && (baseStr.back() == 'f' || baseStr.back() == 'F')) {
-		// isFloat = true;
 		baseStr = baseStr.substr(0, baseStr.size() - 1);
 	}
 
@@ -57,13 +53,11 @@ void ScalarConverter::handleNumeric(const std::string& literal) {
 		std::cout << "Error: Invalid literal format (invalid double)" << std::endl;
 		return;
 	}
-
 	char leftover;
 	if (iss >> leftover) {
 		std::cout << "Error: Invalid literal format (leftover)" << std::endl;
 		return;
 	}
-
 	if (isnan(d) || isinf(d) || d < CHAR_MIN || d > CHAR_MAX) {
 		std::cout << "char: impossible" << std::endl;
 	} else {

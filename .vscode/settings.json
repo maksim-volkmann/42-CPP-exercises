@@ -77,6 +77,8 @@
 		"execution": "cpp",
 		"print": "cpp",
 		"queue": "cpp",
-		"forward_list": "cpp"
+		"forward_list": "cpp",
+		"numeric": "cpp",
+		"random": "cpp"
 	}
 }
